@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLetres_repetides_nivell1_exercici3</title>
+    <script>
+        /* possem nom i cognoms per poder comprovar que hi ha lletres repetides */
+        
+        const nombre = "BeatrizUsietoMontes";
+        const m = new Map();
+        let vegades = 0;
+        
+        console.log(`Partim del nom ${nombre}`);
+
+        for (let i=0; i < nombre.length; i++) {
+           
+            for (let j=0; j < nombre.length; j++) { 
+               if(nombre[i].match(nombre[j]))
+               {
+                   vegades = vegades + 1;
+               } 
+               m.set(nombre[i], vegades);  
+            } 
+            vegades = 0;
+          
+       }
+
+        for (const [k, v] of m.entries()) {
+           console.log(`${k.toUpperCase()}:`, v)
+        }
+       
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLetres_repetides_nivell1_exercici2</title>
+    <script>
+
+        const nombre = "Be4triz";
+        const vocal = nombre.match(/[aeiou]/gi);
+       
+        console.log(`Partim del nom ${nombre}`);
+        
+        for (let i=0; i < nombre.length; i++) {
+           
+            if(nombre[i].match(/[aeiou]/i))
+            {
+             console.log(`He trobat la VOCAL: ${nombre[i]}`);
+            } 
+            
+            else if(nombre[i].match(/(?![aeiou])[a-z]/i))
+            {
+              console.log(`He trobat la CONSONANT: ${nombre[i]}`); 
+            }
+
+            else if(nombre[i].match(/[0-9]/))
+            {
+                console.log(`Els noms de persones no contenen el número: ${nombre[i]}`);  
+            }
+       }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
